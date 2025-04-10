@@ -1,15 +1,23 @@
-public class zZZbadClassnamezzZ {
-public static void main(String[] argz) {
-int[] daNums = {5,2,9,1,5,6};
-SortzDem(daNums);
-for(int q=0;q<daNums.length;q++)System.out.print(daNums[q]+" ");
-}
+public class SortedArray {
+    public static void main(String[] args) {
+        int[] numbers = {9, 4, 1, 6, 2};
+        sort(numbers); 
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print(numbers[i] + " ");
+        }
+        System.out.println(); // optional: adds a newline after printing all numbers
+    }
 
-public static void SortzDem(int[] aRRr){
-for(int i=0;i<=aRRr.length;i++){
-for(int j=0;j<aRRr.length-1;j++)
-{if(aRRr[j]>aRRr[j+1]){
-int Tmp=aRRr[j+1];
-aRRr[j+1]=aRRr[j];
-aRRr[j]=Tmp;}}}
+    public static void sort(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - 1 - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    // swap arr[j] and arr[j + 1]
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
 }
